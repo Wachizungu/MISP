@@ -2601,6 +2601,7 @@ class AttributesController extends AppController
                 }
                 $tag_id = $this->request->data['tag'];
             }
+            $local = empty($this->request->data['local']) ? $local : 1;
             if (!is_numeric($tag_id)) {
                 if (preg_match('/^collection_[0-9]+$/i', $tag_id)) {
                     $tagChoice = explode('_', $tag_id)[1];
