@@ -181,9 +181,6 @@ class AccessLogsController extends AppController
         if (isset($params['memory_usage'])) {
             $conditions['AccessLog.memory_usage >='] = ($params['memory_usage'] * 1024);
         }
-        if (isset($params['memory_usage'])) {
-            $conditions['AccessLog.memory_usage >='] = ($params['memory_usage'] * 1024);
-        }
         if (isset($params['duration'])) {
             $conditions['AccessLog.duration >='] = $params['duration'];
         }
